@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #06070a;
+  --surface: #0e1016;
+  --surface-2: #151823;
+  --line: rgba(255, 255, 255, 0.12);
+  --text: #f2f4f8;
+  --muted: #a3a9b8;
+  --accent: #6d4aff;
+  --accent-2: #b9a4ff;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --font-sans: var(--font-space), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-display: var(--font-bricolage), var(--font-space), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  background-image: radial-gradient(ellipse at 78% -8%, rgba(109, 74, 255, 0.3), transparent 55%), radial-gradient(ellipse at -5% 105%, rgba(109, 74, 255, 0.16), transparent 50%);
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* o brilho roxo fica na janela e acompanha a rolagem, sem borda no fim do primeiro bloco */
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Colagem do hero: cada bloco orbita (translate) e balança em 3D (rotate), em ritmos diferentes */
+@keyframes orbit-a { to { translate: 26px -22px; } }
+@keyframes orbit-b { to { translate: -22px 28px; } }
+@keyframes orbit-c { to { translate: 18px 20px; } }
+@keyframes swing-a {
+  from { transform: perspective(900px) rotateX(10deg) rotateY(-28deg) rotateZ(-4deg); }
+  to   { transform: perspective(900px) rotateX(-8deg) rotateY(26deg) rotateZ(3deg); }
+}
+@keyframes swing-b {
+  from { transform: perspective(900px) rotateX(-12deg) rotateY(30deg) rotateZ(4deg); }
+  to   { transform: perspective(900px) rotateX(8deg) rotateY(-24deg) rotateZ(-3deg); }
+}
+@keyframes swing-c {
+  from { transform: perspective(900px) rotateX(6deg) rotateY(-18deg) rotateZ(2deg) scale(.96); }
+  to   { transform: perspective(900px) rotateX(-6deg) rotateY(34deg) rotateZ(-5deg) scale(1.04); }
+}
+@keyframes tile-in { from { opacity: 0; scale: .8; } to { opacity: 1; scale: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  [class*="anim-"] { animation: none !important; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

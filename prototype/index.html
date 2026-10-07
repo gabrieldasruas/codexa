@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CODEX Tecnologia — Crie seu site da forma que desejar</title>
+  <meta name="description" content="A CODEX Tecnologia cria sites sob medida para o seu negócio. Veja modelos para barbearia, transportadora, joalheria, clínica e restaurante.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#modelos">Ir para os modelos</a>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="CODEX Tecnologia, início">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>CODEX <em>Tecnologia</em></span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#modelos">Modelos</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#socios">Sócios</a>
+      <a class="btn btn-sm" href="#contato">Fale conosco</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow mono">// portfólio de sites para empresas</p>
+        <h1>Crie seu site da forma que você <span class="hl">desejar</span>.</h1>
+        <p class="lead">Veja alguns modelos. Escolha um ponto de partida e a CODEX transforma em um site com a cara do seu negócio.</p>
+        <div class="cta">
+          <a class="btn" href="#modelos">Ver modelos</a>
+          <a class="btn btn-ghost" href="#contato">Quero o meu</a>
+        </div>
+      </div>
+
+      <div class="constellation" id="constellation" aria-label="Modelos de sites conectados à CODEX">
+        <svg class="lines" id="lines" aria-hidden="true"></svg>
+        <div class="hub" id="hub"><span>CODEX</span></div>
+        <!-- cards injetados por script.js -->
+      </div>
+    </section>
+
+    <!-- BIBLIOTECA -->
+    <section class="section" id="modelos">
+      <div class="head">
+        <p class="eyebrow mono">// biblioteca</p>
+        <h2>Modelos por tipo de negócio</h2>
+        <p class="sub">Cada modelo é um ponto de partida. Cores, textos, fotos e seções mudam conforme a sua marca.</p>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Filtrar modelos"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="section" id="processo">
+      <div class="head">
+        <p class="eyebrow mono">// processo</p>
+        <h2>Do primeiro contato ao site no ar</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="mono">01</span><h3>Conversa rápida</h3><p>Entendemos seu negócio, público e o que você quer que o site faça.</p></li>
+        <li><span class="mono">02</span><h3>Escolha do modelo</h3><p>Você escolhe um modelo da biblioteca ou pede algo do zero.</p></li>
+        <li><span class="mono">03</span><h3>Design e código</h3><p>Montamos o site com a sua identidade, rápido e responsivo.</p></li>
+        <li><span class="mono">04</span><h3>Publicação</h3><p>Domínio, hospedagem e ajustes finais. Você recebe tudo pronto.</p></li>
+      </ol>
+    </section>
+
+    <!-- SÓCIOS -->
+    <section class="section" id="socios">
+      <div class="head">
+        <p class="eyebrow mono">// quem somos</p>
+        <h2>Dois sócios, um objetivo: seu negócio online</h2>
+      </div>
+      <div class="partners">
+        <article class="partner"><div class="avatar" aria-hidden="true">G</div><h3>Gabriel <small>[ajustar nome]</small></h3><p>Sócio · Front-end e design</p></article>
+        <article class="partner"><div class="avatar alt" aria-hidden="true">S</div><h3>Sócio 2 <small>[ajustar nome]</small></h3><p>Sócio · Back-end e infraestrutura</p></article>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato">
+      <div class="head">
+        <p class="eyebrow mono">// contato</p>
+        <h2>Vamos criar o seu site</h2>
+        <p class="sub" id="contact-sub">Conte um pouco sobre o seu negócio e respondemos em até 1 dia útil.</p>
+      </div>
+      <form class="form" id="form" novalidate>
+        <label>Nome<input name="nome" required autocomplete="name"></label>
+        <label>WhatsApp ou e-mail<input name="contato" required autocomplete="email"></label>
+        <label>Modelo de interesse
+          <select name="modelo" id="modelo-select"></select>
+        </label>
+        <label class="full">Mensagem<textarea name="msg" rows="4"></textarea></label>
+        <button class="btn" type="submit">Enviar pedido</button>
+        <p class="note" id="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> CODEX Tecnologia</span>
+    <span class="mono">sites sob medida</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
