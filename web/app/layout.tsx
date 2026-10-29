@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, JetBrains_Mono, Playfair_Display, Bricolage_Grotesque, Manrope } from "next/font/google";
+import { Space_Grotesk, JetBrains_Mono, Playfair_Display, Bricolage_Grotesque, Manrope, Oswald } from "next/font/google";
 import "./globals.css";
 
 // fonte de títulos: pesada e com personalidade, no estilo "cinematográfico" da referência
@@ -9,6 +9,8 @@ const playfair = Playfair_Display({ variable: "--font-playfair", subsets: ["lati
 const jetbrains = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"] });
 // texto do modelo Médico: sem serifa limpa, com cara de clínica
 const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"] });
+// títulos do modelo Barbearia: condensada em caixa alta
+const oswald = Oswald({ variable: "--font-oswald", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "Codexa Tecnologia — Crie seu site da forma que desejar",
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${space.variable} ${jetbrains.variable} ${playfair.variable} ${display.variable} ${manrope.variable} h-full`}>
+    <html lang="pt-BR" className={`${space.variable} ${jetbrains.variable} ${playfair.variable} ${display.variable} ${manrope.variable} ${oswald.variable} h-full`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
