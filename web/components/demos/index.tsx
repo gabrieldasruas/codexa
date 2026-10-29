@@ -5,6 +5,7 @@ import Transportadora from "./Transportadora";
 import Joalheria from "./Joalheria";
 import Clinica from "./Clinica";
 import Restaurante from "./Restaurante";
+import Medico from "./Medico";
 
 export const demos: Record<string, ComponentType<{ t: Template }>> = {
   barbearia: Barbearia,
@@ -12,4 +13,5 @@ export const demos: Record<string, ComponentType<{ t: Template }>> = {
   joalheria: Joalheria,
   clinica: Clinica,
   restaurante: Restaurante,
+  medico: Medico,
 };

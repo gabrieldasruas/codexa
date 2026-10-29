@@ -61,6 +61,24 @@ export const templates: Template[] = [
     variante: "menu",
     secoes: ["Hero com prato do dia", "Cardápio digital", "Reserva de mesa", "Delivery", "Mapa e horários"],
   },
+  {
+    slug: "medico",
+    nome: "Médico",
+    categoria: "Saúde",
+    descricao: "Site premium para médicos: tratamentos, primeira consulta, agendamento pelo WhatsApp, depoimentos e convênios.",
+    tags: ["Agendamento", "WhatsApp", "Depoimentos"],
+    cores: ["#f6f8fb", "#1f4fd8", "#0b1b34"],
+    variante: "split",
+    secoes: [
+      "Hero com foto do médico e agendamento pelo WhatsApp",
+      "Tratamentos por área, com exames e cuidados",
+      "Como funciona a primeira consulta",
+      "Sobre o médico, com CRM e formação",
+      "Depoimentos e nota no Google",
+      "Agendamento: tipo, convênio, dia e horário",
+      "Dúvidas frequentes e localização",
+    ],
+  },
 ];
 
 export const categorias = ["Todos", ...Array.from(new Set(templates.map((t) => t.categoria)))];

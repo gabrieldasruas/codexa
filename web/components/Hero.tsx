@@ -56,6 +56,7 @@ const labels = [
   { slug: "restaurante", side: "left", top: "77%" },
   { slug: "transportadora", side: "right", top: "38%" },
   { slug: "clinica", side: "right", top: "62%" },
+  { slug: "medico", side: "right", top: "77%" },
 ] as const;
 
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
