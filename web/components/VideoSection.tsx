@@ -38,8 +38,8 @@ export default function VideoSection() {
           <div className="overflow-hidden rounded-[34px] border-[6px] border-[#0b0b10] bg-black shadow-[0_40px_100px_rgba(0,0,0,.65)] ring-1 ring-white/20">
             <video
               className="block aspect-[9/16] w-full bg-black"
-              src="/video/codexa-anuncio.mp4"
-              poster="/video/codexa-anuncio-capa.webp"
+              src="/video/codexa-anuncio-v2.mp4"
+              poster="/video/codexa-anuncio-v2-capa.webp"
               controls
               playsInline
               preload="none"
